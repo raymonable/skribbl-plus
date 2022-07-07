@@ -12,6 +12,7 @@ In other words, Skribbl, but for a very specific use case.
  - adds a virtual keyboard to make it not require a real keyboard
  - uses skribbl website
  - gives everyone cute little horns whether you want them or not
+ - blocks all ads on the site (forgot it had ads tbh)
 #### Cons:
  - doesn't patch `game.js`
  - could combust at any moment
