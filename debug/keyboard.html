@@ -1,0 +1,68 @@
+<div class="text"></div>
+<div class="keyboard">
+
+</div>
+<style>
+    .keyboard {
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        width: 20%;
+        min-height: 0;
+        transform: translate(-50%, -50%);
+        padding: 8px;
+        background-color: white;
+    }
+    .keyboard-row {
+        display: flex;
+    }
+    .keyboard-key {
+        flex: 1 1 auto;
+        display: flex;
+        align-content: center;
+        justify-content: center;
+        float: left;
+        cursor: pointer;
+        padding: 10px;
+        border: solid 0.5px #d3d3d3;
+        border-radius: 5px;
+        margin: 2px;
+        image-rendering: pixelated;
+    }
+</style>
+<script>
+    var SKRIBBL_PLUS_KEYBOARD = [
+        ['q','w','e','r','t','y','u','i','o','p', {name: '<', exec:() => {
+            document.querySelector('.text').innerHTML = document.querySelector('.text').innerHTML.slice(0, -1)
+        }}],
+        ['a','s','d','f','g','h','j','k','l',{name: '>', exec:() => {
+
+        }}],
+        ['z','x','c','v','b','n','m'],
+        [' ']
+    ];
+    SKRIBBL_PLUS_KEYBOARD.forEach((ROW) => {
+        var _ROW = document.createElement('div');
+        _ROW.classList = "keyboard-row"
+        document.querySelector('.keyboard').appendChild(_ROW);
+        ROW.forEach((KEY) => {
+            var EXEC = () => {
+                if (typeof(KEY) == "object") {
+                    KEY.exec()
+                } else {
+                    document.querySelector('.text').innerHTML += KEY;
+                }
+            }
+            var _KEY = document.createElement('div');
+            _KEY.innerHTML = typeof(KEY) == "object" ? KEY.name : KEY;
+            _KEY.classList = "keyboard-key";
+            _KEY.addEventListener('click', () => {
+                console.log(KEY);
+                EXEC();
+            });
+            _ROW.appendChild(_KEY);
+        });
+        var _BREAK =  document.createElement('br');
+        _ROW.appendChild(_BREAK);
+    })
+</script>

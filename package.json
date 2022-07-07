@@ -1,0 +1,16 @@
+{
+  "dependencies": {
+    "@cliqz/adblocker-electron": "^1.23.8",
+    "cross-fetch": "^3.1.5",
+    "electron": "^19.0.7"
+  },
+  "name": "skribblio",
+  "version": "1.0.0",
+  "main": "skribblio.js",
+  "scripts": {
+    "start": "electron ."
+  },
+  "author": "",
+  "license": "ISC",
+  "description": ""
+}
