@@ -31,6 +31,14 @@ That's *it*.
 
 ![image](https://user-images.githubusercontent.com/101374892/177670329-047d41eb-2a67-4c79-97b8-43a83fbd31d2.png)
 
+### Installation
+ - download [master zip](https://github.com/raymondisatoaster/skribbl-plus/archive/refs/heads/main.zip)
+ - extract to a folder
+ - make sure nodejs is installed, if not, figure out how to install it
+ - open a command line in the folder you just extracted the files to
+ - run `npm i` to install all the necessary packages
+ - run `npm start` to start the application
+ - have fun goddamnit
 
 And yes, I know that the name is all over the place in the code.
 I do not care, it works.
